@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'EB Garamond', Georgia, serif;
+    --font-dev: 'Noto Serif Devanagari', 'EB Garamond', serif;
+    --font-display: 'Cinzel', Georgia, serif;
+  }
+}
+
+.vp-ser {
+  font-family: var(--font-serif);
+}
+
+.vp-dev {
+  font-family: var(--font-dev);
+}
+
+.vp-cinzel {
+  font-family: var(--font-display);
+}
+
+.vp-oov {
+  text-decoration: underline wavy #a33a28;
+  text-underline-offset: 4px;
+}
+
+/* Aged Parchment Texture Subtle Styling */
+.parchment-texture {
+  background-color: #f3e8cf;
+  background-image: 
+    radial-gradient(#e2d3b0 1px, transparent 1px),
+    linear-gradient(135deg, rgba(216, 198, 154, 0.25) 0%, rgba(243, 232, 207, 0.8) 50%, rgba(226, 205, 160, 0.3) 100%);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.dark .parchment-texture {
+  background-color: #1e1913;
+  background-image: 
+    radial-gradient(#2d2419 1px, transparent 1px),
+    linear-gradient(135deg, rgba(45, 36, 25, 0.4) 0%, rgba(30, 25, 19, 0.8) 50%, rgba(55, 42, 28, 0.3) 100%);
+  background-size: 24px 24px, 100% 100%;
+}
+
+/* Custom Archival Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(43, 32, 22, 0.08);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(138, 107, 58, 0.45);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 107, 58, 0.7);
+}
